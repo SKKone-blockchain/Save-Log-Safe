@@ -1,0 +1,177 @@
+[
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "init",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_log",
+				"type": "string"
+			}
+		],
+		"name": "sendLog",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_w",
+				"type": "string"
+			}
+		],
+		"name": "warning",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "constructor"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "logged",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "blocknum",
+				"type": "uint256"
+			}
+		],
+		"name": "LogLog",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_n",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_max_n",
+				"type": "uint256"
+			}
+		],
+		"name": "NumberofLogs",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_i",
+				"type": "uint256"
+			}
+		],
+		"name": "getLogs",
+		"outputs": [
+			{
+				"name": "_returnlog",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_i",
+				"type": "uint256"
+			}
+		],
+		"name": "getLogsInfo",
+		"outputs": [
+			{
+				"name": "_returnlog",
+				"type": "string"
+			},
+			{
+				"name": "_bnum",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getN",
+		"outputs": [
+			{
+				"name": "_returnn",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_i",
+				"type": "uint256"
+			}
+		],
+		"name": "getWarning",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getWN",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

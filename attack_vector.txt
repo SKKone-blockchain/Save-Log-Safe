@@ -1,0 +1,22 @@
+Attack vector
+- Assume : attacker can R/W file in server
+    * manipulate logs
+        => 로그 기록 발생 즉시 savelog 프로세스의 메모리로 읽어와 트랜잭션 발생 전까지 들고 있기 때문에 안전함
+    * steal salt
+        => key 강도가 약해지지만 여전히 password를 모른다면 key를 derivate 할 수 없음
+    * manipulate encrypted log / IPFS logs
+        => 큰 의미가 없는 공격(현재 테스트 목적으로 이를 저장하는데 실제 서비스시에는 지울 수 있음)
+
+- Assume : attacker can control network trafic
+    * manipulate IPFS upload/download packet
+        => 최악의 경우, IPFS에 올라가는 파일이 변조될 수 있다. 이는 메세지 복호화시 탐지할 수 있다(MAC이 변조되기 때문)
+    * manipulate ethereum transaction
+        => 디지털 서명으로 방지할 수 있다.
+
+-Assume : attacker on kernel level
+    * kill savelog process
+        => 프로세스 이름을 바꾸는 것으로 좀 더 어렵게 한다(구체적으로, unit time 내에 죽이기 어렵게 한다.)
+    * manipulate memory of savelog process
+    * key stealing
+        => 막을 수 없음
+
